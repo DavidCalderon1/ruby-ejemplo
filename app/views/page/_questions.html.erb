@@ -1,0 +1,19 @@
+<ul class="nav">
+  <%- questions.each do |q| %>
+    <li>
+      <div class="card">
+        <div class="card__body">
+          <h5>
+            <%= q.title %>
+          </h5>
+          <p>
+            <%= q.description %>
+          </p>
+          <em>
+            <%= q.user.email %>
+          </em>
+        </div>
+      </div>
+    </li>
+  <%-end %>
+</ul>

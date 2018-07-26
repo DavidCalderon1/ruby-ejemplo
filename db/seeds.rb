@@ -5,3 +5,18 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+user = User.create!({
+  email:                 'jhone.cortesg@gmail.com',
+  password:              'password',
+  password_confirmation: 'password'
+})
+
+(0..10).each do |array|
+  Question.create({
+    title: "Titulo de la pregunta #{array}",
+    description: "Esto es un ejemplo de
+    una descripcion de una pregunta",
+    user_id: user.id
+  })
+end
