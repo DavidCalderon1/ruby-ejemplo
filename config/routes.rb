@@ -7,6 +7,9 @@ Rails.application.routes.draw do
   #get to: 'page#show'
   
   namespace :api, defaults: { format: 'json' } do
+    namespace :v1 do
+      resources :questions, only: [:index]
+    end
   end
 
   root to: "page#index"
