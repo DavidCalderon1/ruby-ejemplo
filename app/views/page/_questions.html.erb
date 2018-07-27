@@ -1,10 +1,10 @@
-<ul class="nav">
+<ul class="nav questions__list">
   <%- questions.each do |q| %>
     <li>
       <div class="card">
         <div class="card__body">
           <h5>
-            <%= q.title %>
+            <%= link_to q.title, question_path(q.id) %>
           </h5>
           <p>
             <%= q.description %>

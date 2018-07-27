@@ -1,12 +1,17 @@
 <%= render 'hero' %>
 <div class="container">
-  Categotias
-  <br/>
-  Preguntas
-  <section>
+  <section class="home__questions">
     <div class="container">
       <div class="row" >
         <div class="col-md-8">
+          <h1>
+            Últimas Preguntas
+          </h1>
+          <%= link_to "Crear Pregunta", new_question_path, class: "btn btn-success" %>
+          <%= render 'questions', questions: @questions %>
+        </div>
+        <div class="col-md-4">
+          <br/>
         </div>
       </div>
     </div>
