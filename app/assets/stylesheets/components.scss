@@ -1,3 +1,9 @@
+.navbar__main{
+  @extend .navbar;
+  @extend .navbar-expand-lg;
+  @extend .w-100;
+}
+
 .card{
   margin-bottom: 1.5rem;
 }

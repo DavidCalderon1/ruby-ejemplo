@@ -1,0 +1,47 @@
+.home{
+  .navbar__main{
+    @extend .navbar-dark;
+    position: absolute;
+    left: auto;
+    top: auto;
+    bottom: auto;
+    right: auto;
+    z-index: 3;
+    color: #fff;
+    a{
+      color: #fff;
+    }
+  }
+}
+
+.home__questions{
+  padding-top: 20px;
+}
+
+.questions__list{
+  padding: 20px 0px;
+
+  li{
+    width: 100%;
+  }
+
+  .card{
+    padding: 10px;
+    border: 0px;
+    border-top: 1px solid #dfdfdf;
+    border-radius: 0px;
+  }
+}
+
+.application {
+  main{
+    padding-top: 80px;
+  }
+  .navbar__main{
+    @extend .navbar-light;
+    border-top: 3px solid #4A90E2;
+    background: #fafafb;
+    position: fixed;
+    box-shadow: 0 1px 0 rgba(12,13,14,0.1), 0 1px 6px rgba(59,64,69,0.1);
+  }
+}

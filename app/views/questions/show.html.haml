@@ -19,3 +19,16 @@ Descripción:
   %em
     Creda por:
     = a.user.email
+
+%h1
+  Tú Repuesta
+
+
+= form_for [@question, @answer ] do |f|
+  -if @question.errors.any?
+    - @question.errors.full_messages.each do |e|
+      = debug e
+  = f.label :text
+  = f.text_field :text
+  
+  = f.submit

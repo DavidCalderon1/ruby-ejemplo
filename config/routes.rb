@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  resources :questions, only: [:create, :show, :new]
+  resources :questions, only: [:create, :show, :new] do
+    resources :answers, only: [:create]
+  end
 
   devise_for :users
   resources :users
