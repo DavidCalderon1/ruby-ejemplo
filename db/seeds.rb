@@ -13,10 +13,14 @@ user = User.create!({
 })
 
 (0..10).each do |array|
-  Question.create({
+  q = Question.create({
     title: "Titulo de la pregunta #{array}",
     description: "Esto es un ejemplo de
     una descripcion de una pregunta",
     user_id: user.id
   })
+
+  (0..5).each do |a|
+    q.answers.create({text: "Respuesta #{a}", user_id: user.id})
+  end
 end

@@ -6,3 +6,16 @@ Usuario:
 %hr
 Descripción:
 = @question.description
+
+%hr
+
+%h2
+  Respuestas
+
+- @question.answers.each do |a|
+  %hr
+  = a.text
+  %br
+  %em
+    Creda por:
+    = a.user.email
