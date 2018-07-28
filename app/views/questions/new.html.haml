@@ -1,11 +1,14 @@
-%br
-%br
-%br
 = form_for @question do |f|
   -if @question.errors.any?
     - @question.errors.full_messages.each do |e|
       = debug e
-  = f.label :title
-  = f.text_field :title
+
+  .form-group
+    = f.label :title, 'Título'
+    = f.text_field :title, class: 'form-control'
   
-  = f.submit
+  .form-group
+    = f.label :description, 'Descripción'
+    = f.text_area :description, class: 'form-control'
+  
+  = f.submit 'Guardar Pregunta', class: 'btn btn-success'

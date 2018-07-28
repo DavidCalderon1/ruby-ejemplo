@@ -1,15 +1,10 @@
-Titulo:
-= @question.title
+%h1
+  = @question.title
 %hr
-Usuario:
-= @question.user.email
-%hr
-Descripción:
-= @question.description
+%p
+  = @question.description
 
-%hr
-
-%h2
+%h3
   Respuestas
 
 - @question.answers.each do |a|
@@ -20,15 +15,17 @@ Descripción:
     Creda por:
     = a.user.email
 
-%h1
+%br
+
+%h3
   Tú Repuesta
 
-
+%hr
 = form_for [@question, @answer ] do |f|
   -if @question.errors.any?
     - @question.errors.full_messages.each do |e|
       = debug e
-  = f.label :text
-  = f.text_field :text
+  .form-group
+    = f.text_area :text, class: 'form-control'
   
-  = f.submit
+  = f.submit "Enviar Respuesta", class: 'btn btn-success'
