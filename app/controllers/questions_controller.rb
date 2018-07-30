@@ -8,6 +8,8 @@ class QuestionsController < ApplicationController
   def show
     @question = Question.find(params[:id])
     @answer = Answer.new
+    @meta_title = @question.title
+    @meta_description = @question.description.truncate(250) unless @question.description.nil?
   end
 
   def create

@@ -3,19 +3,40 @@
     <li>
       <div class="card">
         <div class="card__body">
-          <h3 class='title'>
-            <%= link_to q.title, question_path(q.id) %>
-          </h3>
-					<p class= "date">
-						Última actualización: 
-						<%= q.updated_at %>
-					</p>
-          <p>
-            <%= q.description %>
-          </p>
-          <em>
-            <%= q.user.email %>
-          </em>
+          <div class="row">
+            <div class="col-md-3">
+              <div class="row text-center">
+                <div clas="col-md-6">
+                  14 
+                  <br/>
+                  Repuestas
+                </div>
+                <div clas="col-md-6">
+                  12
+                  <br/>
+                  Votos
+                </div>
+              </div>
+            </div>
+            <div class="col.md-9">
+              <h3 class='title'>
+                <%= link_to q.title, question_path(q.id) %>
+              </h3>
+              <div class="labels">
+                <span class="label">
+                  Administrativo
+                </span>
+                <span class="label">
+                  Policivo
+                </span>
+              </div>
+              <br/>
+              <p class= "date">
+                Última actualización: 
+                <%= q.updated_at %>
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </li>
