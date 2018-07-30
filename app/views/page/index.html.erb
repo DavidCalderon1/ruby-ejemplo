@@ -3,15 +3,21 @@
   <section class="home__questions">
     <div class="container">
       <div class="row" >
-        <div class="col-md-8">
-          <h1>
-            Últimas Preguntas
-          </h1>
-          <%= link_to "Crear Pregunta", new_question_path, class: "btn btn-success" %>
-          <%= render 'questions', questions: @questions %>
+        <div class="col-md-3">
+          <%= render 'application/sidebar' %>
         </div>
-        <div class="col-md-4">
-          <br/>
+        <div class="col-md-9">
+          <div class='row'>
+            <div class="col-md-8">
+              <h1>
+                Lo más consultado
+              </h1>
+            </div>
+            <div class="col-md-4">
+              <%= link_to "Crear Pregunta", new_question_path, class: "btn btn-success btn-block" %>
+            </div>
+          </div>
+          <%= render 'questions', questions: @questions %>
         </div>
       </div>
     </div>

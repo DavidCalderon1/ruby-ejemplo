@@ -3,9 +3,13 @@
     <li>
       <div class="card">
         <div class="card__body">
-          <h5>
+          <h3 class='title'>
             <%= link_to q.title, question_path(q.id) %>
-          </h5>
+          </h3>
+					<p class= "date">
+						Última actualización: 
+						<%= q.updated_at %>
+					</p>
           <p>
             <%= q.description %>
           </p>

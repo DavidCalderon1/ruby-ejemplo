@@ -1,10 +1,19 @@
 body{
-  font-family: 'Roboto', sans-serif;
-  color: #323C5A;
+  font-family: 'Open Sans', sans-serif;
+  color: #2e3d49;
+	font-size: 15px;
 }
 
 .application{
 
+}
+
+.logo{
+	height: 30px;
+	width: 250px;
+	background-size: cover;
+	background-size: contain;
+	background-repeat: no-repeat;
 }
 
 .bg-overlay-primary:after{

@@ -11,9 +11,17 @@
     a{
       color: #fff;
     }
+		.logo{
+			background-image: image-url('logo_razon_legal_balco.png');
+		}
   }
 }
 
+.intro{
+  h1{
+    font-size: 36px;  
+  }
+}
 .home__questions{
   padding-top: 20px;
 }
@@ -31,6 +39,18 @@
     border-top: 1px solid #dfdfdf;
     border-radius: 0px;
   }
+	.title{
+		a{		
+			color: #323C5A;
+			font-weight: 700;
+			font-size: 20px;
+		}
+	}
+	.date{
+		margin-bottom: 10px;
+		font-size: 12px;
+		color: #323C5A;
+	}
 }
 
 .application {
@@ -43,5 +63,8 @@
     background: #fafafb;
     position: fixed;
     box-shadow: 0 1px 0 rgba(12,13,14,0.1), 0 1px 6px rgba(59,64,69,0.1);
+		.logo{    
+			background-image: image-url('logo_razon_legal.png');
+		}
   }
 }
