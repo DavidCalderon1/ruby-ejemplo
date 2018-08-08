@@ -10,7 +10,13 @@ Rails.application.routes.draw do
   
   namespace :api, defaults: { format: 'json' } do
     namespace :v1 do
+      resources :users, only: [:index, :show]
       resources :questions, only: [:index]
+      
+      devise_scope :user do
+        match '/sessions' => 'sessions#create', via: :post
+        match '/sessions' => 'sessions#destroy', via: :delete
+      end
     end
   end
 
