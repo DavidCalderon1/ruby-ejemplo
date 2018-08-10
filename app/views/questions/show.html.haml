@@ -4,6 +4,13 @@
 %p
   = @question.description
 
+.labels
+  - @question.tags.each do |t|
+    %span.label
+      = link_to t.name, tag_path(t)
+
+%br
+
 %h3
   Respuestas
 
@@ -16,6 +23,7 @@
     = a.user.email
 
 %br
+
 
 %h3
   Tú Repuesta
