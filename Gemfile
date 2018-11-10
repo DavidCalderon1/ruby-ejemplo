@@ -20,6 +20,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'devise'
 gem 'jwt'
 gem 'rack-cors'
+gem 'bcrypt', '~> 3.1.12'
 
 group :development, :test do
   gem 'byebug', platform: :mri
